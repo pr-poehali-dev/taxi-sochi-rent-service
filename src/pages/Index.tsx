@@ -16,7 +16,7 @@ export default function Index() {
       name: 'Geely Emgrand',
       category: 'Эконом',
       image: 'https://cdn.poehali.dev/files/b019c6e5-7617-4d1b-817d-3954365be579.jpg',
-      price: '2 000',
+      price: 'Акция 2000',
       features: ['Автомат', 'Навигация', 'Пол бака']
     },
     {
@@ -179,7 +179,7 @@ export default function Index() {
                 <CardHeader>
                   <CardTitle className="text-2xl group-hover:text-primary transition-colors">{car.name}</CardTitle>
                   <CardDescription className="text-xl font-bold text-primary">
-                    от {car.price} ₽ / сутки
+                    {car.price} ₽ / сутки
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
