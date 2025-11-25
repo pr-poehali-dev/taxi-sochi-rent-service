@@ -93,6 +93,14 @@ export default function Index() {
     { icon: 'Car', title: 'Выкуп автомобиля', description: 'Выгодные условия выкупа авто' }
   ];
 
+  const branches = [
+    { city: 'Москва', address: 'ул. Тверская, д. 1', phone: '+7 (495) 123-45-67', icon: 'Building2' },
+    { city: 'Санкт-Петербург', address: 'Невский проспект, д. 28', phone: '+7 (812) 987-65-43', icon: 'Building2' },
+    { city: 'Казань', address: 'ул. Баумана, д. 15', phone: '+7 (843) 555-12-34', icon: 'Building2' },
+    { city: 'Екатеринбург', address: 'пр. Ленина, д. 50', phone: '+7 (343) 777-88-99', icon: 'Building2' },
+    { city: 'Новосибирск', address: 'Красный проспект, д. 35', phone: '+7 (383) 444-22-11', icon: 'Building2' }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b">
@@ -300,6 +308,44 @@ export default function Index() {
               </Accordion>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Наши филиалы</h2>
+            <p className="text-xl text-muted-foreground">Работаем по всей России</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {branches.map((branch, index) => (
+              <Card 
+                key={index}
+                className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary"
+              >
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
+                      <Icon name={branch.icon as any} size={24} className="text-white" />
+                    </div>
+                    <CardTitle className="text-xl">{branch.city}</CardTitle>
+                  </div>
+                  <CardDescription className="text-base space-y-2">
+                    <div className="flex items-start gap-2">
+                      <Icon name="MapPin" size={16} className="text-primary mt-1" />
+                      <span>{branch.address}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Icon name="Phone" size={16} className="text-primary" />
+                      <a href={`tel:${branch.phone}`} className="hover:text-primary transition-colors">
+                        {branch.phone}
+                      </a>
+                    </div>
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
