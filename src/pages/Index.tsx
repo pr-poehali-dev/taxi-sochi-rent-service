@@ -400,7 +400,7 @@ export default function Index() {
               <h3 className="text-2xl font-bold mb-4 text-primary">
                 Таксопарк 74/18
               </h3>
-              <p className="text-muted-foreground">Надежная аренда автомобилей в Москве с 2019 года</p>
+              <p className="text-muted-foreground">Надежная аренда автомобилей в Сочи с 2019</p>
             </div>
             <div>
               <h4 className="font-bold mb-4">Компания</h4>
