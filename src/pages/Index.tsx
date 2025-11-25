@@ -364,7 +364,7 @@ export default function Index() {
                       <a href="tel:+79331690249" className="text-xl text-primary hover:underline">
                         +7 933 169 02 49
                       </a>
-                      <p className="text-muted-foreground mt-1">Круглосуточно</p>
+                      <p className="text-muted-foreground mt-1">с 9:00 до 18:00, Пн-Пт</p>
                     </div>
                   </div>
                 </CardContent>
