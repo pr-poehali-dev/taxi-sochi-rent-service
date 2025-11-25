@@ -90,10 +90,10 @@ export default function Index() {
         <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-scale-in">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              Аренда авто в Москве
+              Аренда авто под такси в Сочи
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-              Широкий выбор автомобилей с выгодными условиями и быстрой подачей
+              Специальные условия для таксистов. Выгодные тарифы для длительной аренды
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-secondary hover:scale-105 transition-transform">
