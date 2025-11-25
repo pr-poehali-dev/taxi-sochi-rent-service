@@ -66,14 +66,14 @@ export default function Index() {
       price: '2 700',
       period: 'сутки',
       features: ['Без ограничения км', 'Камера 360', 'Детское кресло', 'Geely Coolray'],
-      popular: true
+      popular: false
     },
     {
       title: 'Электро',
       price: '2 500',
       period: 'сутки',
       features: ['Запас хода 350 км', 'Экономия на топливе', '1 зарядка 750₽', 'Evolute I-PRO'],
-      popular: false
+      popular: true
     },
     {
       title: 'Бизнес',
