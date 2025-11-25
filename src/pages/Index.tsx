@@ -109,7 +109,12 @@ export default function Index() {
             <a href="#conditions" className="text-foreground hover:text-primary transition-colors">Условия</a>
             <a href="#contacts" className="text-foreground hover:text-primary transition-colors">Контакты</a>
           </div>
-          <Button className="hidden md:block">Забронировать</Button>
+          <Button 
+            className="hidden md:block bg-primary text-black hover:bg-primary/90 font-semibold"
+            onClick={() => setIsBookingModalOpen(true)}
+          >
+            Забронировать
+          </Button>
         </nav>
       </header>
 
