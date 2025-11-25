@@ -89,7 +89,8 @@ export default function Index() {
     { icon: 'CreditCard', title: 'Документы', description: 'Паспорт и водительские права' },
     { icon: 'Clock', title: 'Бронирование 24/7', description: 'Круглосуточная поддержка' },
     { icon: 'Banknote', title: 'Первый день аренды бесплатный', description: '' },
-    { icon: 'Percent', title: 'Акции', description: 'Выгодные предложения для водителей' }
+    { icon: 'Percent', title: 'Акции', description: 'Выгодные предложения для водителей' },
+    { icon: 'Car', title: 'Выкуп автомобиля', description: 'Выгодные условия выкупа авто' }
   ];
 
   return (
