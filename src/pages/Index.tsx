@@ -93,7 +93,7 @@ export default function Index() {
               Аренда авто под такси в Сочи
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-              Специальные условия для таксистов. Выгодные тарифы для длительной аренды
+              Выгодные тарифы для длительной аренды
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-secondary hover:scale-105 transition-transform">
@@ -111,7 +111,7 @@ export default function Index() {
                 <div className="text-muted-foreground">Автомобилей</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-secondary mb-2">5 лет</div>
+                <div className="text-4xl font-bold text-secondary mb-2">10 лет</div>
                 <div className="text-muted-foreground">На рынке</div>
               </div>
               <div className="text-center">
