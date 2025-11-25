@@ -6,9 +6,11 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 
 export default function Index() {
   const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
   const cars = [
     {
@@ -191,7 +193,10 @@ export default function Index() {
                       </div>
                     ))}
                   </div>
-                  <Button className="w-full group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary transition-all">
+                  <Button 
+                    onClick={() => setIsBookingModalOpen(true)}
+                    className="w-full group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary transition-all"
+                  >
                     Забронировать
                   </Button>
                 </CardContent>
@@ -433,6 +438,45 @@ export default function Index() {
           </div>
         </div>
       </footer>
+
+      <Dialog open={isBookingModalOpen} onOpenChange={setIsBookingModalOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-2xl text-center">Забронировать автомобиль</DialogTitle>
+          </DialogHeader>
+          <div className="flex flex-col items-center gap-6 py-4">
+            <div className="flex items-center gap-3 text-2xl font-bold text-primary">
+              <Icon name="Phone" size={28} />
+              <a href="tel:+79331690249" className="hover:underline">
+                +7 933 169 02 49
+              </a>
+            </div>
+            <p className="text-center text-muted-foreground">
+              Напишите пожалуйста нам на WhatsApp или Telegram
+            </p>
+            <div className="flex gap-4 w-full">
+              <Button 
+                asChild 
+                className="flex-1 bg-green-600 hover:bg-green-700"
+              >
+                <a href="https://wa.me/79331690249" target="_blank" rel="noopener noreferrer">
+                  <Icon name="MessageCircle" className="mr-2" />
+                  WhatsApp
+                </a>
+              </Button>
+              <Button 
+                asChild 
+                className="flex-1 bg-blue-600 hover:bg-blue-700"
+              >
+                <a href="https://t.me/+79331690249" target="_blank" rel="noopener noreferrer">
+                  <Icon name="Send" className="mr-2" />
+                  Telegram
+                </a>
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
