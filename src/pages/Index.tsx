@@ -39,7 +39,7 @@ export default function Index() {
       id: 4,
       name: 'Hongqi H5',
       category: 'Бизнес',
-      image: 'https://cdn.poehali.dev/projects/2fbcb2c9-c870-451e-86cc-2436c6a4f784/files/9379521c-dab4-4440-93e1-8eaf4467bb7a.jpg',
+      image: 'https://cdn.poehali.dev/files/92e5defa-4d80-4800-b144-22a73d1cb4ba.jpg',
       price: '4 500',
       features: ['Автомат', 'Камера 360', 'Высокие требования', 'Тариф Бизнес']
     },
