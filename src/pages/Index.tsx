@@ -23,7 +23,7 @@ export default function Index() {
       id: 2,
       name: 'Geely Coolray',
       category: 'Комфорт',
-      image: 'https://cdn.poehali.dev/projects/2fbcb2c9-c870-451e-86cc-2436c6a4f784/files/2fc3e7d0-6504-4d94-8c38-78e3cc1604a7.jpg',
+      image: 'https://cdn.poehali.dev/files/877a0cd0-60ed-4a30-8856-1cf1d2b6e36c.jpg',
       price: '2 700',
       features: ['Автомат', 'Камера 360', 'Детское кресло']
     },
