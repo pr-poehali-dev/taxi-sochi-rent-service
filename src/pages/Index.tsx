@@ -31,7 +31,7 @@ export default function Index() {
       id: 3,
       name: 'Электромобиль Evolute I-PRO',
       category: 'Электро',
-      image: 'https://cdn.poehali.dev/projects/2fbcb2c9-c870-451e-86cc-2436c6a4f784/files/73d46210-4e8c-48c8-a8df-9844b4178974.jpg',
+      image: 'https://cdn.poehali.dev/files/4649d105-6797-4b37-bb37-71e94921cc50.jpg',
       price: '3 500',
       features: ['Автомат', 'Запас хода 350 км', 'Экономия на топливе', '1 сессия 750р до полного!']
     },
