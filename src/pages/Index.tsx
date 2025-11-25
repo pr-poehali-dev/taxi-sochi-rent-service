@@ -285,15 +285,7 @@ export default function Index() {
                     Какие документы нужны для аренды?
                   </AccordionTrigger>
                   <AccordionContent className="text-base">
-                    Для аренды необходимы паспорт РФ и водительское удостоверение. Стаж вождения должен быть не менее 2 лет.
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-2">
-                  <AccordionTrigger className="text-lg font-semibold hover:text-primary">
-                    Можно ли выехать за границу?
-                  </AccordionTrigger>
-                  <AccordionContent className="text-base">
-                    Выезд за границу возможен на отдельных моделях автомобилей по согласованию с менеджером и оформлению дополнительных документов.
+                    Для аренды необходимы паспорт РФ и водительское удостоверение. Стаж вождения от 3 лет.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">
@@ -301,15 +293,7 @@ export default function Index() {
                     Что входит в стоимость аренды?
                   </AccordionTrigger>
                   <AccordionContent className="text-base">
-                    В стоимость включены: страховка КАСКО, ОСАГО, круглосуточная поддержка, техническая помощь на дороге и полный бак топлива при выдаче.
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-4">
-                  <AccordionTrigger className="text-lg font-semibold hover:text-primary">
-                    Как происходит возврат залога?
-                  </AccordionTrigger>
-                  <AccordionContent className="text-base">
-                    Залог возвращается в течение 24 часов после возврата автомобиля без повреждений и штрафов. Деньги разблокируются на вашей карте автоматически.
+                    В стоимость аренды включены Путевые листы, круглосуточная поддержка, пол бака бензина 92 или 95, подключение к парку.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
