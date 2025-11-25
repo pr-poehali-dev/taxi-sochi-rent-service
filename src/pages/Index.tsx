@@ -11,6 +11,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 export default function Index() {
   const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const [isPhoneModalOpen, setIsPhoneModalOpen] = useState(false);
 
   const cars = [
     {
@@ -127,7 +128,12 @@ export default function Index() {
                 <Icon name="Car" className="mr-2" />
                 Выбрать авто
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 hover:scale-105 transition-transform border-primary text-primary hover:bg-primary hover:text-black font-semibold">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-lg px-8 py-6 hover:scale-105 transition-transform border-primary text-primary hover:bg-primary hover:text-black font-semibold"
+                onClick={() => setIsPhoneModalOpen(true)}
+              >
                 <Icon name="Phone" className="mr-2" />
                 Позвонить
               </Button>
@@ -474,6 +480,25 @@ export default function Index() {
                 </a>
               </Button>
             </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={isPhoneModalOpen} onOpenChange={setIsPhoneModalOpen}>
+        <DialogContent className="sm:max-w-md bg-card border-primary/20">
+          <DialogHeader>
+            <DialogTitle className="text-2xl text-center text-primary">Позвонить нам</DialogTitle>
+          </DialogHeader>
+          <div className="flex flex-col items-center gap-6 py-4">
+            <div className="flex items-center gap-3 text-3xl font-bold text-primary">
+              <Icon name="Phone" size={32} />
+              <a href="tel:+79331690249" className="hover:underline">
+                +7 933 169 02 49
+              </a>
+            </div>
+            <p className="text-center text-muted-foreground">
+              Нажмите на номер, чтобы позвонить
+            </p>
           </div>
         </DialogContent>
       </Dialog>
