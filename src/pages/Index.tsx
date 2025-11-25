@@ -56,21 +56,21 @@ export default function Index() {
   const tariffs = [
     {
       title: 'Комфорт',
-      price: '2 000',
+      price: 'от 2000',
       period: 'сутки',
       features: ['Без ограничения км', 'Пол бака топлива', 'Поддержка 24/7', 'Geely Emgrand'],
       popular: false
     },
     {
       title: 'Комфорт',
-      price: '2 700',
+      price: 'от 2700',
       period: 'сутки',
       features: ['Без ограничения км', 'Камера 360', 'Детское кресло', 'Geely Coolray'],
       popular: false
     },
     {
       title: 'Электро',
-      price: '2 500',
+      price: 'от 2000',
       period: 'сутки',
       features: ['Запас хода 350 км', 'Экономия на топливе', '1 зарядка 750₽', 'Evolute I-PRO'],
       popular: true
