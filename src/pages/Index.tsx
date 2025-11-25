@@ -361,26 +361,10 @@ export default function Index() {
                     </div>
                     <div>
                       <h3 className="font-bold text-lg mb-2">Телефон</h3>
-                      <a href="tel:+74951234567" className="text-xl text-primary hover:underline">
-                        +7 (495) 123-45-67
+                      <a href="tel:+79331690249" className="text-xl text-primary hover:underline">
+                        +7 933 169 02 49
                       </a>
                       <p className="text-muted-foreground mt-1">Круглосуточно</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="border-2 hover:border-secondary transition-colors hover:shadow-lg">
-                <CardContent className="pt-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-secondary to-accent flex items-center justify-center flex-shrink-0">
-                      <Icon name="Mail" size={24} className="text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg mb-2">Email</h3>
-                      <a href="mailto:info@autorent.ru" className="text-xl text-secondary hover:underline">
-                        info@autorent.ru
-                      </a>
-                      <p className="text-muted-foreground mt-1">Ответим в течение часа</p>
                     </div>
                   </div>
                 </CardContent>
