@@ -130,17 +130,21 @@ export default function Index() {
                 Позвонить
               </Button>
             </div>
-            <div className="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-4xl font-bold text-primary mb-2">150+</div>
                 <div className="text-muted-foreground">Автомобилей</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-secondary mb-2">10 лет</div>
+                <div className="text-4xl font-bold text-secondary mb-2">5</div>
+                <div className="text-muted-foreground">Филиалов по всей России</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-accent mb-2">10 лет</div>
                 <div className="text-muted-foreground">На рынке</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-accent mb-2">24/7</div>
+                <div className="text-4xl font-bold text-primary mb-2">24/7</div>
                 <div className="text-muted-foreground">Поддержка</div>
               </div>
             </div>
