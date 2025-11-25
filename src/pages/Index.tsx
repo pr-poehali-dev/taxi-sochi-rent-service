@@ -42,6 +42,14 @@ export default function Index() {
       image: 'https://cdn.poehali.dev/projects/2fbcb2c9-c870-451e-86cc-2436c6a4f784/files/9cf36142-e649-4868-9532-49b225371392.jpg',
       price: '4 500',
       features: ['Автомат', 'Камера 360', 'Высокие требования', 'Тариф Бизнес']
+    },
+    {
+      id: 5,
+      name: 'BYD HAN 2025',
+      category: 'Бизнес',
+      image: 'https://cdn.poehali.dev/projects/2fbcb2c9-c870-451e-86cc-2436c6a4f784/files/73d46210-4e8c-48c8-a8df-9844b4178974.jpg',
+      price: '5 500',
+      features: ['Автомат', 'Камера 360', 'Высокие требования', 'Тариф Бизнес', 'Запас хода 500 км']
     }
   ];
 
