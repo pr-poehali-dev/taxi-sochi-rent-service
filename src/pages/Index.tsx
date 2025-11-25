@@ -100,7 +100,7 @@ export default function Index() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b">
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="text-2xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-            AutoRent
+            Таксопарк 74/18
           </div>
           <div className="hidden md:flex gap-8">
             <a href="#fleet" className="hover:text-primary transition-colors">Автопарк</a>
