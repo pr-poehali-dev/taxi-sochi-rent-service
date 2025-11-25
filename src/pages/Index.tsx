@@ -15,7 +15,7 @@ export default function Index() {
       id: 1,
       name: 'Geely Emgrand',
       category: 'Эконом',
-      image: 'https://cdn.poehali.dev/projects/2fbcb2c9-c870-451e-86cc-2436c6a4f784/files/9cf36142-e649-4868-9532-49b225371392.jpg',
+      image: 'https://cdn.poehali.dev/files/b019c6e5-7617-4d1b-817d-3954365be579.jpg',
       price: '2 000',
       features: ['Автомат', 'Навигация', 'Пол бака']
     },
