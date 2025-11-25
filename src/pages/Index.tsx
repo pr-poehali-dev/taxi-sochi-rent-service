@@ -13,27 +13,27 @@ export default function Index() {
   const cars = [
     {
       id: 1,
-      name: 'Geely Emgrand',
-      category: 'Эконом',
+      name: 'BMW 5 Series',
+      category: 'Премиум',
       image: 'https://cdn.poehali.dev/projects/2fbcb2c9-c870-451e-86cc-2436c6a4f784/files/9cf36142-e649-4868-9532-49b225371392.jpg',
-      price: '2 000',
-      features: ['Автомат', 'Навигация', 'Пол бака']
+      price: '5 500',
+      features: ['Автомат', 'Полный бак', 'Навигация', 'Bluetooth']
     },
     {
       id: 2,
-      name: 'Geely Coolray',
-      category: 'Комфорт',
+      name: 'Audi A6',
+      category: 'Премиум',
       image: 'https://cdn.poehali.dev/projects/2fbcb2c9-c870-451e-86cc-2436c6a4f784/files/2fc3e7d0-6504-4d94-8c38-78e3cc1604a7.jpg',
-      price: '2 700',
-      features: ['Автомат', 'Камера 360', 'Детское кресло']
+      price: '6 000',
+      features: ['Автомат', 'Кожа', 'Камера 360°', 'Apple CarPlay']
     },
     {
       id: 3,
-      name: 'Электромобиль Evolute I-PRO',
-      category: 'Электро',
+      name: 'Kia Rio',
+      category: 'Эконом',
       image: 'https://cdn.poehali.dev/projects/2fbcb2c9-c870-451e-86cc-2436c6a4f784/files/73d46210-4e8c-48c8-a8df-9844b4178974.jpg',
-      price: '3 500',
-      features: ['Автомат', 'Запас хода 350 км', 'Экономия на топливе', '1 сессия 750р до полного!']
+      price: '2 500',
+      features: ['Механика', 'Кондиционер', 'USB', 'AUX']
     }
   ];
 
@@ -127,7 +127,7 @@ export default function Index() {
         <div className="container mx-auto">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Наш автопарк</h2>
-            <p className="text-xl text-muted-foreground">Выбери идеальный авто для выполнения заказов</p>
+            <p className="text-xl text-muted-foreground">Выберите идеальный автомобиль для ваших задач</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cars.map((car, index) => (
