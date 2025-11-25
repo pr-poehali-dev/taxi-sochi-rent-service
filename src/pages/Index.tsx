@@ -271,7 +271,7 @@ export default function Index() {
             {rentalConditions.map((condition, index) => (
               <Card 
                 key={index}
-                className="text-center hover:shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:-translate-y-2 border-2 border-primary/30 hover:border-primary bg-zinc-900">
+                className="text-center hover:shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:-translate-y-2 border-2 border-primary/30 hover:border-primary bg-zinc-900"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader>
