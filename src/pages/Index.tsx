@@ -55,31 +55,31 @@ export default function Index() {
 
   const tariffs = [
     {
-      title: 'Эконом',
+      title: 'Комфорт',
       price: '2 000',
       period: 'сутки',
-      features: ['Без ограничения км', 'Каско включено', 'Пол бака топлива', 'Поддержка 24/7', 'Geely Emgrand'],
+      features: ['Без ограничения км', 'Пол бака топлива', 'Поддержка 24/7', 'Geely Emgrand'],
       popular: false
     },
     {
       title: 'Комфорт',
       price: '2 700',
       period: 'сутки',
-      features: ['Без ограничения км', 'Полное каско', 'Камера 360', 'Детское кресло', 'Geely Coolray'],
+      features: ['Без ограничения км', 'Камера 360', 'Детское кресло', 'Geely Coolray'],
       popular: true
     },
     {
       title: 'Электро',
-      price: '3 500',
+      price: '2 500',
       period: 'сутки',
-      features: ['Запас хода 350 км', 'Каско включено', 'Экономия на топливе', '1 зарядка 750₽', 'Evolute I-PRO'],
+      features: ['Запас хода 350 км', 'Экономия на топливе', '1 зарядка 750₽', 'Evolute I-PRO'],
       popular: false
     },
     {
       title: 'Бизнес',
       price: '4 500',
       period: 'сутки',
-      features: ['Без ограничения км', 'VIP каско', 'Высокие требования', 'Камера 360', 'Hongqi H5 / BYD HAN'],
+      features: ['Без ограничения км', 'Высокие требования', 'Камера 360', 'Hongqi H5 / BYD HAN'],
       popular: false
     }
   ];
