@@ -124,9 +124,13 @@ export default function Index() {
               Таксопарк 74/18
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-6 bg-primary text-black hover:scale-105 transition-transform font-semibold">
+              <Button 
+                size="lg" 
+                className="text-lg px-8 py-6 bg-primary text-black hover:scale-105 transition-transform font-semibold"
+                onClick={() => setIsBookingModalOpen(true)}
+              >
                 <Icon name="Car" className="mr-2" />
-                Выбрать авто
+                Забронировать
               </Button>
               <Button 
                 size="lg" 
@@ -446,13 +450,13 @@ export default function Index() {
       </footer>
 
       <Dialog open={isBookingModalOpen} onOpenChange={setIsBookingModalOpen}>
-        <DialogContent className="sm:max-w-md">
+        <DialogContent className="sm:max-w-md bg-card border-primary/20">
           <DialogHeader>
-            <DialogTitle className="text-2xl text-center">Забронировать автомобиль</DialogTitle>
+            <DialogTitle className="text-2xl text-center text-primary">Забронировать автомобиль</DialogTitle>
           </DialogHeader>
           <div className="flex flex-col items-center gap-6 py-4">
-            <div className="flex items-center gap-3 text-2xl font-bold text-primary">
-              <Icon name="Phone" size={28} />
+            <div className="flex items-center gap-3 text-3xl font-bold text-primary">
+              <Icon name="Phone" size={32} />
               <a href="tel:+79331690249" className="hover:underline">
                 +7 933 169 02 49
               </a>
@@ -460,26 +464,6 @@ export default function Index() {
             <p className="text-center text-muted-foreground">
               Напишите пожалуйста нам на WhatsApp или Telegram
             </p>
-            <div className="flex gap-4 w-full">
-              <Button 
-                asChild 
-                className="flex-1 bg-green-600 hover:bg-green-700"
-              >
-                <a href="https://wa.me/79331690249" target="_blank" rel="noopener noreferrer">
-                  <Icon name="MessageCircle" className="mr-2" />
-                  WhatsApp
-                </a>
-              </Button>
-              <Button 
-                asChild 
-                className="flex-1 bg-blue-600 hover:bg-blue-700"
-              >
-                <a href="https://t.me/+79331690249" target="_blank" rel="noopener noreferrer">
-                  <Icon name="Send" className="mr-2" />
-                  Telegram
-                </a>
-              </Button>
-            </div>
           </div>
         </DialogContent>
       </Dialog>
