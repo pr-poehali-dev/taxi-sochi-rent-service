@@ -96,8 +96,8 @@ export default function Index() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-primary/20">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b">
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="text-2xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
             AutoRent
@@ -112,8 +112,8 @@ export default function Index() {
         </nav>
       </header>
 
-      <section className="pt-32 pb-20 px-4 relative overflow-hidden bg-black">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-yellow-500/20 to-accent/20 animate-fade-in"></div>
+      <section className="pt-32 pb-20 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 animate-fade-in"></div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-5xl mx-auto text-center animate-scale-in">
             <h1 className="text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent tracking-wider">
@@ -154,7 +154,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="fleet" className="py-20 px-4 bg-black">
+      <section id="fleet" className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Наш автопарк</h2>
@@ -164,7 +164,7 @@ export default function Index() {
             {cars.map((car, index) => (
               <Card 
                 key={car.id} 
-                className="group hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:-translate-y-2 border-2 border-primary/30 hover:border-primary overflow-hidden bg-zinc-900"
+                className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary overflow-hidden"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative overflow-hidden">
@@ -206,7 +206,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="tariffs" className="py-20 px-4 bg-zinc-950">
+      <section id="tariffs" className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Тарифы</h2>
@@ -216,8 +216,8 @@ export default function Index() {
             {tariffs.map((tariff, index) => (
               <Card 
                 key={index}
-                className={`relative hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 bg-zinc-900 ${
-                  tariff.popular ? 'border-primary border-4 scale-105' : 'border-2 border-primary/30 hover:-translate-y-2'
+                className={`relative hover:shadow-2xl transition-all duration-300 ${
+                  tariff.popular ? 'border-primary border-4 scale-105' : 'hover:-translate-y-2'
                 }`}
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
@@ -261,7 +261,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="conditions" className="py-20 px-4 bg-black">
+      <section id="conditions" className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Условия аренды</h2>
@@ -271,12 +271,12 @@ export default function Index() {
             {rentalConditions.map((condition, index) => (
               <Card 
                 key={index}
-                className="text-center hover:shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:-translate-y-2 border-2 border-primary/30 hover:border-primary bg-zinc-900"
+                className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader>
                   <div className="mx-auto w-16 h-16 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center mb-4">
-                    <Icon name={condition.icon as any} size={32} className="text-black" />
+                    <Icon name={condition.icon as any} size={32} className="text-white" />
                   </div>
                   <CardTitle className="text-xl">{condition.title}</CardTitle>
                   <CardDescription className="text-base">{condition.description}</CardDescription>
@@ -312,14 +312,14 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-4 bg-zinc-950">
+      <section id="contacts" className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Контакты</h2>
             <p className="text-xl text-muted-foreground">Свяжитесь с нами удобным способом</p>
           </div>
           <div className="grid md:grid-cols-2 gap-12">
-            <Card className="border-2 border-primary/30 hover:border-primary transition-colors bg-zinc-900">
+            <Card className="border-2 hover:border-primary transition-colors">
               <CardHeader>
                 <CardTitle className="text-2xl">Оставьте заявку</CardTitle>
                 <CardDescription>Мы перезвоним в течение 5 минут</CardDescription>
@@ -358,11 +358,11 @@ export default function Index() {
               </CardContent>
             </Card>
             <div className="space-y-6">
-              <Card className="border-2 border-primary/30 hover:border-primary transition-colors hover:shadow-lg hover:shadow-primary/30 bg-zinc-900">
+              <Card className="border-2 hover:border-primary transition-colors hover:shadow-lg">
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center flex-shrink-0">
-                      <Icon name="Phone" size={24} className="text-black" />
+                      <Icon name="Phone" size={24} className="text-white" />
                     </div>
                     <div>
                       <h3 className="font-bold text-lg mb-2">Телефон</h3>
@@ -374,11 +374,11 @@ export default function Index() {
                   </div>
                 </CardContent>
               </Card>
-              <Card className="border-2 border-primary/30 hover:border-accent transition-colors hover:shadow-lg hover:shadow-accent/30 bg-zinc-900">
+              <Card className="border-2 hover:border-accent transition-colors hover:shadow-lg">
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-r from-accent to-primary flex items-center justify-center flex-shrink-0">
-                      <Icon name="MapPin" size={24} className="text-black" />
+                      <Icon name="MapPin" size={24} className="text-white" />
                     </div>
                     <div>
                       <h3 className="font-bold text-lg mb-2">Адрес</h3>
@@ -393,7 +393,7 @@ export default function Index() {
         </div>
       </section>
 
-      <footer className="bg-black border-t border-primary/20 text-white py-12 px-4">
+      <footer className="bg-gray-900 text-white py-12 px-4">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
