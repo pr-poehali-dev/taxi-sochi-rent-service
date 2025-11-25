@@ -39,7 +39,7 @@ export default function Index() {
       id: 4,
       name: 'Hongqi H5',
       category: 'Бизнес',
-      image: 'https://cdn.poehali.dev/projects/2fbcb2c9-c870-451e-86cc-2436c6a4f784/files/9cf36142-e649-4868-9532-49b225371392.jpg',
+      image: 'https://cdn.poehali.dev/projects/2fbcb2c9-c870-451e-86cc-2436c6a4f784/files/9379521c-dab4-4440-93e1-8eaf4467bb7a.jpg',
       price: '4 500',
       features: ['Автомат', 'Камера 360', 'Высокие требования', 'Тариф Бизнес']
     },
@@ -47,7 +47,7 @@ export default function Index() {
       id: 5,
       name: 'BYD HAN 2025',
       category: 'Бизнес',
-      image: 'https://cdn.poehali.dev/projects/2fbcb2c9-c870-451e-86cc-2436c6a4f784/files/73d46210-4e8c-48c8-a8df-9844b4178974.jpg',
+      image: 'https://cdn.poehali.dev/projects/2fbcb2c9-c870-451e-86cc-2436c6a4f784/files/dc9efcff-d276-48e3-9240-77aa017b8677.jpg',
       price: '5 500',
       features: ['Автомат', 'Камера 360', 'Высокие требования', 'Тариф Бизнес', 'Запас хода 500 км']
     }
