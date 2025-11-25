@@ -88,7 +88,7 @@ export default function Index() {
     { icon: 'User', title: 'Возраст от 25 лет', description: 'Стаж вождения от 2 лет' },
     { icon: 'CreditCard', title: 'Документы', description: 'Паспорт и водительские права' },
     { icon: 'Clock', title: 'Бронирование 24/7', description: 'Круглосуточная поддержка' },
-    { icon: 'Banknote', title: 'Первый день аренды бесплатный', description: 'При длительной аренде' },
+    { icon: 'Banknote', title: 'Первый день аренды бесплатный', description: '' },
     { icon: 'Percent', title: 'Акции', description: 'Выгодные предложения для водителей' }
   ];
 
