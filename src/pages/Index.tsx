@@ -37,7 +37,7 @@ export default function Index() {
     },
     {
       id: 4,
-      name: 'Hongqi H5 2024',
+      name: 'Hongqi H5',
       category: 'Бизнес',
       image: 'https://cdn.poehali.dev/projects/2fbcb2c9-c870-451e-86cc-2436c6a4f784/files/9cf36142-e649-4868-9532-49b225371392.jpg',
       price: '4 500',
