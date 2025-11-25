@@ -85,10 +85,11 @@ export default function Index() {
   ];
 
   const rentalConditions = [
-    { icon: 'User', title: 'Возраст от 21 года', description: 'Стаж вождения от 2 лет' },
+    { icon: 'User', title: 'Возраст от 25 лет', description: 'Стаж вождения от 2 лет' },
     { icon: 'CreditCard', title: 'Документы', description: 'Паспорт и водительские права' },
-    { icon: 'Shield', title: 'Залог', description: 'От 10 000 ₽ на карте' },
-    { icon: 'Clock', title: 'Бронирование', description: 'Минимум за 2 часа до аренды' }
+    { icon: 'Clock', title: 'Бронирование 24/7', description: 'Круглосуточная поддержка' },
+    { icon: 'Banknote', title: 'Первый день аренды бесплатный', description: 'При длительной аренде' },
+    { icon: 'Percent', title: 'Акции', description: 'Выгодные предложения для таксистов' }
   ];
 
   return (
