@@ -59,6 +59,8 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     smtp_password = os.environ.get('SMTP_PASSWORD')
     email_to = os.environ.get('EMAIL_TO')
     
+    print(f"DEBUG: smtp_user='{smtp_user}', has_password={bool(smtp_password)}, email_to='{email_to}'")
+    
     if not smtp_user or not smtp_password or not email_to:
         return {
             'statusCode': 500,
