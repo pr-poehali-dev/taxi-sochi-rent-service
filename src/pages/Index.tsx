@@ -262,6 +262,7 @@ export default function Index() {
                     ))}
                   </ul>
                   <Button 
+                    onClick={() => setIsBookingModalOpen(true)}
                     className={`w-full font-semibold ${
                       tariff.popular 
                         ? 'bg-primary text-black hover:scale-105' 
