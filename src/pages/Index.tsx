@@ -12,6 +12,8 @@ export default function Index() {
   const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const [isPhoneModalOpen, setIsPhoneModalOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
 
   const cars = [
     {
@@ -340,7 +342,34 @@ export default function Index() {
                 <CardDescription>Мы перезвоним в течение 5 минут</CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="space-y-4">
+                <form className="space-y-4" onSubmit={async (e) => {
+                  e.preventDefault();
+                  setIsSubmitting(true);
+                  setSubmitMessage('');
+                  
+                  try {
+                    const response = await fetch('https://functions.poehali.dev/518512d8-6dbb-4bf3-a9ff-42fe5eab55d9', {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json',
+                      },
+                      body: JSON.stringify(formData)
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (response.ok) {
+                      setSubmitMessage('Заявка отправлена успешно!');
+                      setFormData({ name: '', phone: '', message: '' });
+                    } else {
+                      setSubmitMessage(result.error || 'Ошибка отправки');
+                    }
+                  } catch (error) {
+                    setSubmitMessage('Ошибка соединения');
+                  } finally {
+                    setIsSubmitting(false);
+                  }
+                }}>
                   <div>
                     <Input 
                       placeholder="Ваше имя" 
@@ -366,9 +395,18 @@ export default function Index() {
                       className="min-h-32"
                     />
                   </div>
-                  <Button className="w-full h-12 text-lg bg-primary text-black hover:scale-105 transition-transform font-semibold">
-                    Отправить заявку
+                  <Button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full h-12 text-lg bg-primary text-black hover:scale-105 transition-transform font-semibold disabled:opacity-50"
+                  >
+                    {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
                   </Button>
+                  {submitMessage && (
+                    <p className={`text-center mt-2 ${submitMessage.includes('успешно') ? 'text-green-500' : 'text-red-500'}`}>
+                      {submitMessage}
+                    </p>
+                  )}
                 </form>
               </CardContent>
             </Card>
