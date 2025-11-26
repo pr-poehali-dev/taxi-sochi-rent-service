@@ -65,18 +65,33 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
         'text': telegram_message
     }).encode()
     
-    req = urllib.request.Request(url, data=data)
-    response = urllib.request.urlopen(req)
-    response_data = json.loads(response.read().decode())
+    print(f"Sending to Telegram: chat_id={chat_id}, message_length={len(telegram_message)}")
     
-    if not response_data.get('ok'):
+    try:
+        req = urllib.request.Request(url, data=data)
+        response = urllib.request.urlopen(req)
+        response_data = json.loads(response.read().decode())
+        
+        print(f"Telegram response: {response_data}")
+        
+        if not response_data.get('ok'):
+            return {
+                'statusCode': 500,
+                'headers': {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*'
+                },
+                'body': json.dumps({'error': 'Ошибка отправки в Telegram'})
+            }
+    except Exception as e:
+        print(f"Telegram API error: {str(e)}")
         return {
             'statusCode': 500,
             'headers': {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
             },
-            'body': json.dumps({'error': 'Ошибка отправки в Telegram'})
+            'body': json.dumps({'error': f'Ошибка: {str(e)}'})
         }
     
     return {
