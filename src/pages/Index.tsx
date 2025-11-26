@@ -466,9 +466,26 @@ export default function Index() {
                 +7 933 169 02 49
               </a>
             </div>
-            <p className="text-center text-muted-foreground">
-              Напишите пожалуйста нам на WhatsApp или Telegram
-            </p>
+            <div className="flex flex-col sm:flex-row gap-4 w-full">
+              <a 
+                href="https://wa.me/79331690249" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe57] text-white px-6 py-3 rounded-lg font-semibold transition-colors flex-1"
+              >
+                <Icon name="MessageCircle" size={20} />
+                WhatsApp
+              </a>
+              <a 
+                href="https://t.me/+79331690249" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-[#0088cc] hover:bg-[#0077b3] text-white px-6 py-3 rounded-lg font-semibold transition-colors flex-1"
+              >
+                <Icon name="Send" size={20} />
+                Telegram
+              </a>
+            </div>
           </div>
         </DialogContent>
       </Dialog>
