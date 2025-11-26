@@ -1,0 +1,32 @@
+{
+  "tests": [
+    {
+      "name": "Test send email with valid data",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Иван Иванов",
+        "phone": "+79991234567",
+        "message": "Хочу арендовать Geely Coolray"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test send email without phone",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Иван Иванов"
+      },
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
