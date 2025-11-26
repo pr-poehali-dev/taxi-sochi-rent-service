@@ -56,7 +56,7 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     smtp_host = 'smtp.yandex.ru'
     smtp_port = 465
     smtp_user = 'shafieva.nastya@yandex.ru'
-    smtp_password = '5gine;gr8VHV6G@'
+    smtp_password = 'dka5mwrG9n5FBTe'
     email_to = 'shafieva.nastya@yandex.ru'
     
     msg = MIMEMultipart('alternative')
