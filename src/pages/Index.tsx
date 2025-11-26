@@ -403,6 +403,38 @@ export default function Index() {
                   </div>
                 </CardContent>
               </Card>
+              <Card className="border-2 border-primary/20 hover:border-primary transition-colors hover:shadow-lg hover:shadow-primary/50 bg-card">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                      <Icon name="MessageCircle" size={24} className="text-black" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-lg mb-3">Мессенджеры</h3>
+                      <div className="flex gap-3">
+                        <a 
+                          href="https://wa.me/79331690249" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe57] text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+                        >
+                          <Icon name="MessageCircle" size={18} />
+                          WhatsApp
+                        </a>
+                        <a 
+                          href="https://t.me/+79331690249" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 bg-[#0088cc] hover:bg-[#0077b3] text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+                        >
+                          <Icon name="Send" size={18} />
+                          Telegram
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
