@@ -1,14 +1,11 @@
 import json
-import smtplib
-import os
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
+import urllib.request
+import urllib.parse
 from typing import Dict, Any
-import time
 
 def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     '''
-    Business: Отправка заявок с сайта на email
+    Business: Отправка заявок с сайта в Telegram
     Args: event - dict with httpMethod, body, queryStringParameters
           context - object with attributes: request_id, function_name
     Returns: HTTP response dict
@@ -53,37 +50,34 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
             'body': json.dumps({'error': 'Имя и телефон обязательны'})
         }
     
-    smtp_host = 'smtp.yandex.ru'
-    smtp_port = 465
-    smtp_user = 'shafieva.nastya@yandex.ru'
-    smtp_password = 'dka5mwrG9n5FBTe'
-    email_to = 'shafieva.nastya@yandex.ru'
+    bot_token = '7783198981:AAHrzvRv8ODfEqAQb8IkA4zQ0cBHJcISARk'
+    chat_id = '8066269752'
     
-    msg = MIMEMultipart('alternative')
-    msg['Subject'] = f'Новая заявка с сайта от {name}'
-    msg['From'] = smtp_user
-    msg['To'] = email_to
+    telegram_message = f"""🚖 Новая заявка с сайта Таксопарк 74/18
+
+👤 Имя: {name}
+📞 Телефон: {phone}
+💬 Сообщение: {message if message else 'Не указано'}"""
     
-    html_body = f'''
-    <html>
-      <body style="font-family: Arial, sans-serif;">
-        <h2 style="color: #333;">Новая заявка с сайта Таксопарк 74/18</h2>
-        <div style="background: #f5f5f5; padding: 20px; border-radius: 5px;">
-          <p><strong>Имя:</strong> {name}</p>
-          <p><strong>Телефон:</strong> {phone}</p>
-          <p><strong>Сообщение:</strong> {message if message else 'Не указано'}</p>
-        </div>
-      </body>
-    </html>
-    '''
+    url = f'https://api.telegram.org/bot{bot_token}/sendMessage'
+    data = urllib.parse.urlencode({
+        'chat_id': chat_id,
+        'text': telegram_message
+    }).encode()
     
-    html_part = MIMEText(html_body, 'html')
-    msg.attach(html_part)
+    req = urllib.request.Request(url, data=data)
+    response = urllib.request.urlopen(req)
+    response_data = json.loads(response.read().decode())
     
-    server = smtplib.SMTP_SSL(smtp_host, smtp_port)
-    server.login(smtp_user, smtp_password)
-    server.send_message(msg)
-    server.quit()
+    if not response_data.get('ok'):
+        return {
+            'statusCode': 500,
+            'headers': {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
+            'body': json.dumps({'error': 'Ошибка отправки в Telegram'})
+        }
     
     return {
         'statusCode': 200,
