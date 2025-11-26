@@ -80,7 +80,7 @@ export default function Index() {
     },
     {
       title: 'Бизнес',
-      price: '4 500',
+      price: 'от 4 500',
       period: 'сутки',
       features: ['Без ограничения км', 'Высокие требования', 'Камера 360', 'Hongqi H5 / BYD HAN'],
       popular: false
